@@ -9,3 +9,7 @@ ID:20, Nome:Teste01, Categoria:Teste, Descricao:Testador
 ID:21, Nome:TesteFactory1, Categoria:Factory, Descricao:Factory1
 ID:22, Nome:Factory2, Categoria:Factoty2, Descricao:aaaaaaaaaaa
 ID:33, Nome:Factory3, Categoria:Factory333, Descricao:AAAAAAAAAAAAAAAAAaaa
+ID:34, Nome:Strategy , Categoria:Strategy , Descricao:Strategy 
+ID:35, Nome:TesteLog, Categoria:TesteLog, Descricao:TesteLOg
+ID:36, Nome:TesteLog2, Categoria:TesleLog2, Descricao:TesteLog2
+ID:37, Nome:TestelOg3, Categoria:log3, Descricao:teste3

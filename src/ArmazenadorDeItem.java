@@ -32,18 +32,23 @@ public class ArmazenadorDeItem {
     // Adiciona um item à lista em memória
     public void armazenarItem(Item i) {
         itens.add(i);
+        notificar("Item adicionado", i);
     }
+    
 
     // Remove um item pelo ID; retorna true se removido
     public boolean retirarItem(int id) {
         for (Item it : itens) {
             if (it.getIdItem() == id) {
                 itens.remove(it);
+                notificar("Item removido", it);
                 return true;
             }
         }
         return false;
     }
+    
+
 
     // Busca um item pelo ID; retorna null se não encontrar
     public Item selecionarItem(int id) {
@@ -120,4 +125,16 @@ public class ArmazenadorDeItem {
         return lista;
     }
 
+    private ArrayList<ObservadorDeItem> observadores = new ArrayList<>();
+
+    public void adicionarObservador(ObservadorDeItem obs) {
+        observadores.add(obs);
+    }
+    
+    private void notificar(String acao, Item item) {
+        for (ObservadorDeItem obs : observadores) {
+            obs.atualizar(acao, item);
+        }
+    }
+    
 }

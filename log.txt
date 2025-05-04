@@ -1,0 +1,2 @@
+[2025-05-04 18:28:44] Item adicionado: Item{id=36, nome='TesteLog2', categoria='TesleLog2', descricao='TesteLog2'}
+[2025-05-04 18:29:54] Item adicionado: Item{id=37, nome='TestelOg3', categoria='log3', descricao='teste3'}

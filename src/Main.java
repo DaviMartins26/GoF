@@ -10,6 +10,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ArmazenadorDeFuncionario adf = new ArmazenadorDeFuncionario();
         ArmazenadorDeItem adi = ArmazenadorDeItem.getInstancia();
+        adi.adicionarObservador(new LogEmArquivo());
         ArmazenadorDeUsuario adu = new ArmazenadorDeUsuario();
 
         Estoque estoque = new Estoque(1);

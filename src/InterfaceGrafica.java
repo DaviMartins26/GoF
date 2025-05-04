@@ -81,6 +81,7 @@ public class InterfaceGrafica extends JFrame {
                 System.out.println("6 - Modificar Dados de Usuário");
                 System.out.println("7 - Exibir Usuários");
                 System.out.println("8 - Executar Interface Grafica");
+                System.out.println("9 - Executar pesquisa por Nome do item");
                 System.out.println("0 - Sair");
                 System.out.println("===============================");
             }
