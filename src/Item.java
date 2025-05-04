@@ -1,69 +1,88 @@
+import java.util.Scanner;
+
 public class Item {
-    private static int contador = 1; // usado para gerar ID único
+    // Contador estático: compartilhado por todas as instâncias
+    private static int contador = 1;
+
+    // Atributos de instância
     private int idItem;
     private String nomeItem;
     private String categoria;
     private String descricao;
 
-    // Construtor padrão
+    // Construtor padrão: atribui ID único
     public Item() {
         this.idItem = contador++;
     }
 
-    // Getters e Setters
+    // Getter do ID
     public int getIdItem() {
         return idItem;
     }
 
+    // Setter do ID (usado ao carregar de arquivo)
     public void setIdItem(int idItem) {
         this.idItem = idItem;
     }
 
+    // Getter/Setter de nome
     public String getNomeItem() {
         return nomeItem;
     }
-
     public void setNomeItem(String nomeItem) {
         this.nomeItem = nomeItem;
     }
 
+    // Getter/Setter de categoria
     public String getCategoria() {
         return categoria;
     }
-
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
+    // Getter/Setter de descrição
     public String getDecricao() {
         return descricao;
     }
-
     public void setDecricao(String descricao) {
         this.descricao = descricao;
     }
 
-    // Método para gerar novo item via console
+    // Método de instância para popular via console
     public void gerarItem() {
-        try {
-            java.util.Scanner sc = new java.util.Scanner(System.in);
-            System.out.print("Nome do item: ");
-            this.nomeItem = sc.nextLine();
-            System.out.print("Categoria do item: ");
-            this.categoria = sc.nextLine();
-            System.out.print("Descrição do item: ");
-            this.descricao = sc.nextLine();
-        } catch (Exception e) {
-            System.out.println("Erro ao gerar item: " + e.getMessage());
-        }
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nome do item: ");
+        this.nomeItem = sc.nextLine();
+        System.out.print("Categoria do item: ");
+        this.categoria = sc.nextLine();
+        System.out.print("Descrição do item: ");
+        this.descricao = sc.nextLine();
     }
 
-    // Controle do contador global (usado ao carregar do arquivo)
-    public void setContador(int c) {
-        contador = c + 1; // evitar sobrescrever o último ID usado
+    // Métodos estáticos para controle do contador global
+
+    /**
+     * Ajusta o contador interno para (c + 1), evitando colisão de IDs.
+     * Deve ser chamado antes de criar novos itens, usando o maior ID já existente.
+     */
+    public static void setContador(int c) {
+        contador = c + 1;
     }
 
-    public int getContador() {
+    /**
+     * Retorna o valor atual do contador (próximo ID que será atribuído).
+     */
+    public static int getContador() {
         return contador;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{id=" + idItem +
+               ", nome='" + nomeItem + '\'' +
+               ", categoria='" + categoria + '\'' +
+               ", descricao='" + descricao + '\'' +
+               '}';
     }
 }

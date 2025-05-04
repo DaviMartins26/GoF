@@ -5,3 +5,7 @@ ID:14, Nome:teste, Categoria:teste, Descricao:teste
 ID:16, Nome:teste, Categoria:teste, Descricao:teste
 ID:17, Nome:Canela Azul, Categoria:Material Escolar, Descricao:Bic
 ID:19, Nome:terate, Categoria:56, Descricao:fasxrt
+ID:20, Nome:Teste01, Categoria:Teste, Descricao:Testador
+ID:21, Nome:TesteFactory1, Categoria:Factory, Descricao:Factory1
+ID:22, Nome:Factory2, Categoria:Factoty2, Descricao:aaaaaaaaaaa
+ID:33, Nome:Factory3, Categoria:Factory333, Descricao:AAAAAAAAAAAAAAAAAaaa

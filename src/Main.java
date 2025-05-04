@@ -91,22 +91,36 @@ public class Main {
                         it.setContador(c3);
                     }
 
-                    Usuario us = new Usuario();
-                    Funcionario fu = new Funcionario();
-
+                    adf.armazenarArrayList(adf.carregarDoArquivo());
+                    adi.armazenarArrayList(adi.carregarDoArquivo());
+                    adu.armazenarArrayList(adu.carregarDoArquivo());
+                    estoque.armazenarArrayList(estoque.carregarDoArquivo());
+                    
+                    if (adi.RetornarIdTxt() > estoque.RetornarIdTxt()) {
+                        int c = adi.RetornarIdTxt();
+                        Item.setContador(c);
+                    } else if (adi.RetornarIdTxt() < estoque.RetornarIdTxt()) {
+                        int c = estoque.RetornarIdTxt();
+                        Item.setContador(c);
+                    } else {
+                        int c = adi.RetornarIdTxt();
+                        Item.setContador(c);
+                    }
+                    
                     if (adf.retornarRegistroTxt() > adu.retornarIdTxt()) {
                         int c = adf.retornarRegistroTxt();
-                        us.setContador(c);
-                        fu.setContador(c);
+                        Usuario.setContador(c);
+                        Funcionario.setContador(c);
                     } else if (adf.retornarRegistroTxt() < adu.retornarIdTxt()) {
                         int c = adu.retornarIdTxt();
-                        us.setContador(c);
-                        fu.setContador(c);
+                        Usuario.setContador(c);
+                        Funcionario.setContador(c);
                     } else {
                         int c = adf.retornarRegistroTxt();
-                        u.setContador(c);
-                        fu.setContador(c);
+                        Usuario.setContador(c);  // Corrigido: era u.setContador(c);
+                        Funcionario.setContador(c);
                     }
+                    
 
 
                     System.out.println("===============================");
@@ -282,34 +296,34 @@ public class Main {
                     adi.armazenarArrayList(adi.carregarDoArquivo());
                     adu.armazenarArrayList(adu.carregarDoArquivo());
                     estoque.armazenarArrayList(estoque.carregarDoArquivo());
-                    Item it = new Item();
 
                     if (adi.RetornarIdTxt() > estoque.RetornarIdTxt()) {
                         int c = adi.RetornarIdTxt();
-                        it.setContador(c);
+                        Item.setContador(c);
                     } else if (adi.RetornarIdTxt() < estoque.RetornarIdTxt()) {
                         int c = estoque.RetornarIdTxt();
-                        it.setContador(c);
+                        Item.setContador(c);
                     } else {
                         int c = adi.RetornarIdTxt();
-                        it.setContador(c);
+                        Item.setContador(c);
                     }
 
-                    Usuario us = new Usuario();
-                    Funcionario fu = new Funcionario();
+
 
                     if (adf.retornarRegistroTxt() > adu.retornarIdTxt()) {
                         int c = adf.retornarRegistroTxt();
-                        us.setContador(c);
-                        fu.setContador(c);
+                        Usuario.setContador(c);
+                        Funcionario.setContador(c);
                     } else if (adf.retornarRegistroTxt() < adu.retornarIdTxt()) {
-                        int c = adu.retornarIdTxt();
-                        us.setContador(c);
-                        fu.setContador(c);
+                        int c = adf.retornarRegistroTxt();
+                        Usuario.setContador(c);
+                        Funcionario.setContador(c);
+                        
                     } else {
                         int c = adf.retornarRegistroTxt();
-                        u.setContador(c);
-                        fu.setContador(c);
+                        Usuario.setContador(c);
+                        Funcionario.setContador(c);
+                        
                     }
 
 
