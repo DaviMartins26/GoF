@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Item {
     // Contador estático: compartilhado por todas as instâncias
     private static int contador = 1;
@@ -9,26 +8,37 @@ public class Item {
     private String nomeItem;
     private String categoria;
     private String descricao;
+    private Item proximo; // Campo de referência para o próximo item na lista encadeada
 
     // Construtor padrão: atribui ID único
     public Item() {
         this.idItem = contador++;
     }
 
+    // Getter/Setter para o campo 'proximo'
+    public Item getProximo() {
+        return proximo;
+    }
+
+    public void setProximo(Item proximo) {
+        this.proximo = proximo;
+    }
+
+    
     // Getter do ID
     public int getIdItem() {
         return idItem;
     }
 
-    // Setter do ID (usado ao carregar de arquivo)
-    public void setIdItem(int idItem) {
+    public void setIdItem(int idItem){
         this.idItem = idItem;
     }
-
+    
     // Getter/Setter de nome
     public String getNomeItem() {
         return nomeItem;
     }
+
     public void setNomeItem(String nomeItem) {
         this.nomeItem = nomeItem;
     }
@@ -37,6 +47,7 @@ public class Item {
     public String getCategoria() {
         return categoria;
     }
+
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
@@ -45,6 +56,7 @@ public class Item {
     public String getDecricao() {
         return descricao;
     }
+
     public void setDecricao(String descricao) {
         this.descricao = descricao;
     }
@@ -60,19 +72,11 @@ public class Item {
         this.descricao = sc.nextLine();
     }
 
-    // Métodos estáticos para controle do contador global
-
-    /**
-     * Ajusta o contador interno para (c + 1), evitando colisão de IDs.
-     * Deve ser chamado antes de criar novos itens, usando o maior ID já existente.
-     */
+    // Método estático para controle do contador global
     public static void setContador(int c) {
         contador = c + 1;
     }
 
-    /**
-     * Retorna o valor atual do contador (próximo ID que será atribuído).
-     */
     public static int getContador() {
         return contador;
     }

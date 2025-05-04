@@ -91,6 +91,8 @@ public class Main {
                         it.setContador(c3);
                     }
 
+                    // tentativa de fazer o Item Factory funcionar
+
                     adf.armazenarArrayList(adf.carregarDoArquivo());
                     adi.armazenarArrayList(adi.carregarDoArquivo());
                     adu.armazenarArrayList(adu.carregarDoArquivo());
@@ -292,8 +294,8 @@ public class Main {
                 while (escolha != 0) {
 
                     adf.armazenarArrayList(adf.carregarDoArquivo());
-                    adi.armazenarArrayList(adi.carregarDoArquivo());
-                    adi.armazenarArrayList(adi.carregarDoArquivo());
+
+
                     adu.armazenarArrayList(adu.carregarDoArquivo());
                     estoque.armazenarArrayList(estoque.carregarDoArquivo());
 
@@ -337,6 +339,7 @@ public class Main {
                     System.out.println("6 - Modificar Dados de Usuário");
                     System.out.println("7 - Exibir Usuários");
                     System.out.println("8 - Executar Interface Grafica");
+                    System.out.println("9 - Executar pesquisa por Nome do item");
                     System.out.println("0 - Sair");
                     System.out.println("===============================");
 
@@ -452,6 +455,22 @@ public class Main {
                                     new InterfaceGrafica().setVisible(true);
                                 }
                             });
+                        }
+
+                        case 9 ->{
+                            System.out.print("Nome do item a buscar: ");
+                            String termo = sc.nextLine();
+                            BuscaStrategy estr = new BuscaPorNome();
+                            BuscadorDeItem buscador = new BuscadorDeItem(estr);
+                            Item encontrado = buscador.buscar(termo);
+                            System.out.println(
+                              encontrado != null
+                                ? "Encontrado: " + encontrado
+                                : "Nenhum item encontrado com esse nome."
+                            );
+                            break;
+                        
+                            
                         }
 
                         case 0 -> System.out.println("Saindo do sistema... Até logo!");
