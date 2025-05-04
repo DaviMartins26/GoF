@@ -1,0 +1,7 @@
+ID:10, Nome:testedecontador, Categoria:e, Descricao:e
+ID:4, Nome:tsts2, Categoria:tst2, Descricao:tst2
+ID:12, Nome:testedecontador4, Categoria:4, Descricao:4
+ID:15, Nome:teste, Categoria:teste, Descricao:teste
+ID:7, Nome:teste, Categoria:teste, Descricao:teste
+ID:8, Nome:teste, Categoria:teste, Descricao:teset
+ID:18, Nome:Lancheira do bem 10, Categoria:LANCHEIRA, Descricao:Lancheira do bndez cabe suco e bolacha

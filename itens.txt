@@ -1,0 +1,7 @@
+ID:6, Nome:teste, Categoria:tset, Descricao:teste
+ID:11, Nome:testecontadordenovo, Categoria:r, Descricao:r
+ID:13, Nome:testedecontador13, Categoria:13, Descricao:13
+ID:14, Nome:teste, Categoria:teste, Descricao:teste
+ID:16, Nome:teste, Categoria:teste, Descricao:teste
+ID:17, Nome:Canela Azul, Categoria:Material Escolar, Descricao:Bic
+ID:19, Nome:terate, Categoria:56, Descricao:fasxrt
