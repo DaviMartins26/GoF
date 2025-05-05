@@ -5,3 +5,4 @@ ID:15, Nome:teste, Categoria:teste, Descricao:teste
 ID:7, Nome:teste, Categoria:teste, Descricao:teste
 ID:8, Nome:teste, Categoria:teste, Descricao:teset
 ID:18, Nome:Lancheira do bem 10, Categoria:LANCHEIRA, Descricao:Lancheira do bndez cabe suco e bolacha
+ID:20, Nome:Teste01, Categoria:Teste, Descricao:Testador

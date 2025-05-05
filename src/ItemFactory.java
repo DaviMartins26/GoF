@@ -16,7 +16,7 @@ public class ItemFactory {
     }
 
     // Método para criar item com entrada via console
-    public Item criarItemViaConsole() {
+    public Item criarItem() {
         Item item = new Item();
         item.gerarItem(); // Lê nome, categoria, descrição
         return item;

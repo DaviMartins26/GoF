@@ -1,2 +1,5 @@
 [2025-05-04 18:28:44] Item adicionado: Item{id=36, nome='TesteLog2', categoria='TesleLog2', descricao='TesteLog2'}
 [2025-05-04 18:29:54] Item adicionado: Item{id=37, nome='TestelOg3', categoria='log3', descricao='teste3'}
+[2025-05-04 19:24:43] Item removido: Item{id=20, nome='Teste01', categoria='Teste', descricao='Testador'}
+[2025-05-05 18:38:53] Item adicionado: Item{id=38, nome='Testefactory', categoria='fac', descricao='fac'}
+[2025-05-05 18:42:15] Item adicionado: Item{id=39, nome='TesteFactory2aaaaaaaaaaaaaaaaa', categoria='aaaaaaaaaaaaaa', descricao='vbbbbbbbb'}

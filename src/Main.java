@@ -24,18 +24,13 @@ public class Main {
         adi.armazenarArrayList(adi.carregarDoArquivo());
         adu.armazenarArrayList(adu.carregarDoArquivo());
         estoque.armazenarArrayList(estoque.carregarDoArquivo());
-        Item i = new Item();
 
-        if (adi.RetornarIdTxt() > estoque.RetornarIdTxt()) {
-            int c = adi.RetornarIdTxt();
-            i.setContador(c);
-        } else if (adi.RetornarIdTxt() < estoque.RetornarIdTxt()) {
-            int c = estoque.RetornarIdTxt();
-            i.setContador(c);
-        } else {
-            int c = adi.RetornarIdTxt();
-            i.setContador(c);
-        }
+        // Colocando Factory
+        ItemFactory.getInstance().sincronizarContadorGlobal(
+            adi.RetornarIdTxt(),
+            estoque.RetornarIdTxt()
+        );
+        
 
         Usuario u = new Usuario();
         Funcionario f = new Funcionario();
@@ -80,17 +75,13 @@ public class Main {
                     adi.armazenarArrayList(adi.carregarDoArquivo());
                     adu.armazenarArrayList(adu.carregarDoArquivo());
                     estoque.armazenarArrayList(estoque.carregarDoArquivo());
-                    Item it = new Item();
 
-                    if (adi.RetornarIdTxt() > estoque.RetornarIdTxt()) {
-                        int c = adi.RetornarIdTxt();
-                        it.setContador(c);
-                        int c2 = estoque.RetornarIdTxt();
-                        it.setContador(c2);
-                    } else {
-                        int c3 = adi.RetornarIdTxt();
-                        it.setContador(c3);
-                    }
+                    // Factory 
+                    ItemFactory.getInstance().sincronizarContadorGlobal(
+                        adi.RetornarIdTxt(),
+                        estoque.RetornarIdTxt()
+                    );
+                    
 
                     // tentativa de fazer o Item Factory funcionar
 
@@ -102,6 +93,7 @@ public class Main {
                     if (adi.RetornarIdTxt() > estoque.RetornarIdTxt()) {
                         int c = adi.RetornarIdTxt();
                         Item.setContador(c);
+                        
                     } else if (adi.RetornarIdTxt() < estoque.RetornarIdTxt()) {
                         int c = estoque.RetornarIdTxt();
                         Item.setContador(c);
@@ -154,8 +146,7 @@ public class Main {
                         }
                         case 2 -> {
                             System.out.println("Opção selecionada: Registrar Item");
-                            Item item = new Item();
-                            item.gerarItem();
+                            Item item = ItemFactory.getInstance().criarItem();
                             adi.armazenarItem(item);
                             adi.salvarEmArquivo();
                         }
@@ -190,8 +181,7 @@ public class Main {
                             } else if (yn == 2) {
                                 System.out.println("\nOpção selecionada: 'NAO'\n");
                                 System.out.println("Registrar Item\n");
-                                Item item = new Item();
-                                item.gerarItem();
+                                Item item = ItemFactory.getInstance().criarItem();
                                 estoque.armazenarItem(item);
                                 estoque.salvarEmArquivo();
                             } else {
@@ -358,8 +348,7 @@ public class Main {
                         }
                         case 2 -> {
                             System.out.println("Opção selecionada: Registrar Item");
-                            Item item = new Item();
-                            item.gerarItem();
+                            Item item = ItemFactory.getInstance().criarItem();
                             adi.armazenarItem(item);
                             adi.salvarEmArquivo();
                         }
@@ -393,8 +382,7 @@ public class Main {
                             } else if (yn == 2) {
                                 System.out.println("\nOpção selecionada: 'NAO'\n");
                                 System.out.println("Registrar Item\n");
-                                Item item = new Item();
-                                item.gerarItem();
+                                Item item = ItemFactory.getInstance().criarItem();
                                 estoque.armazenarItem(item);
                                 estoque.salvarEmArquivo();
                             } else {
